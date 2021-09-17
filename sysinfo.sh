@@ -9,10 +9,14 @@ echo "you file system is used $var"
 
 if  [ "$var">=10 ] 
 then
-	echo "you will have an email"  #next task send it by email
+	
 	echo  "you file system is used $var" >> $HOME/sysinfo.log
+	echo "you will have an email also"  #next task send the out put as email alert
+	mail -s "sysinfo" 
 
 else  	echo "not having email"
 fi
+
+
 
 
